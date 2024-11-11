@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body className="min-h-screen bg-white">
+      <body className="min-h-screen bg-white vsc-initialized">
         {/* 배경 블러 원 */}
         <div className="fixed top-[-20%] left-[-10%] w-[40%] h-[40%] bg-gradient-to-r from-[#00FF9D] to-[#00FF9D]/50 rounded-full blur-[150px] opacity-70" />
         <div className="fixed bottom-[-20%] right-[-10%] w-[40%] h-[40%] bg-gradient-to-l from-[#4A90E2] to-[#4A90E2]/50 rounded-full blur-[150px] opacity-70" />
