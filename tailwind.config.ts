@@ -9,8 +9,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        'mint': '#00C896',
+        'mint-light': '#7FFFD4',
+        'mint-dark': '#00A67C',
+        'blue': '#4A90E2',
+        'blue-light': '#89CFF0',
+        'dark-gray': '#4A4A4A',
+      },
+      backgroundImage: {
+        'dots': "radial-gradient(#4A4A4A 1px, transparent 1px)",
+      },
+      backgroundSize: {
+        'dots': '20px 20px',
       },
     },
   },

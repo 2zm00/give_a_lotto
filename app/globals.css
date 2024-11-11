@@ -1,21 +1,21 @@
+/* globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --mint: #00C896;
+  --mint-light: #7FFFD4;
+  --blue: #4A90E2;
+  --blue-light: #89CFF0;
+  --dark-gray: #4A4A4A;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: white;
+}
+
+.bg-dots {
+  background-image: radial-gradient(#4A4A4A 1px, transparent 1px);
+  background-size: 20px 20px;
 }
