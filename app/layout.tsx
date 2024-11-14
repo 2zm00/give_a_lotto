@@ -6,6 +6,20 @@ import Navbar from '@/components/navbar'
 export const metadata: Metadata = {
   title: 'GIVE A LOT-TO',
   description: 'AI 기반 로또 번호 추천 서비스',
+  icons: {
+    icon: [
+      {
+        url: '/lotto-icon.svg',
+        type: 'image/svg+xml',
+      }
+    ],
+    shortcut: [
+      {
+        url: '/lotto-icon.svg',
+        type: 'image/svg+xml',
+      }
+    ],
+  },
 }
 
 export default function RootLayout({
