@@ -71,7 +71,7 @@ export default function SignupPage() {
 
   // 유효성 검사
   const validateField = (name: string, value: string) => {
-    let newErrors = { ...errors };
+    const newErrors = { ...errors };
 
     switch (name) {
       case 'email':
