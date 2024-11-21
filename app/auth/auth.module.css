@@ -1,0 +1,171 @@
+/* app/auth/auth.module.css */
+.container {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+	background-color: rgba(0, 0, 0, 0);
+  }
+
+.loginBox {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.inputGroup {
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e1e1e1;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.loginButton {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.socialLogin {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.socialLogin h3 {
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.socialButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.socialButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.socialButton:hover {
+  opacity: 0.9;
+}
+
+.kakao {
+  background-color: #fee500;
+  color: #000000;
+}
+
+.naver {
+  background-color: #03c75a;
+  color: white;
+}
+
+.github {
+  background-color: #24292e;
+  color: white;
+}
+
+.signup {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.signup p {
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.signupButton {
+  color: #3b82f6;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .loginBox {
+    padding: 1.5rem;
+  }
+}
+
+.error {
+	color: #ef4444;
+	font-size: 0.875rem;
+	margin-top: 0.25rem;
+	display: block;
+  }
+  
+  .inputGroup {
+	margin-bottom: 0.5rem;
+  }
+
+  .select {
+	width: 100%;
+	padding: 0.75rem 1rem;
+	border: 1px solid #e1e1e1;
+	border-radius: 0.5rem;
+	font-size: 1rem;
+	background-color: white;
+	transition: border-color 0.2s;
+	appearance: none;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23666' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right 1rem center;
+	cursor: pointer;
+  }
+  
+  .select:focus {
+	outline: none;
+	border-color: #3b82f6;
+  }

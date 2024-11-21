@@ -2,9 +2,16 @@
 'use client'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useRouter } from 'next/navigation'
 
 export default function MenuBar() {
   const [isOpen, setIsOpen] = useState(false)
+  const router = useRouter()
+
+  const handleNavigation = (path: string) => {
+    setIsOpen(false) // 메뉴 닫기
+    router.push(path)
+  }
 
   return (
     <div className="relative">
@@ -29,10 +36,16 @@ export default function MenuBar() {
             className="absolute right-0 mt-2 w-48 bg-white rounded-2xl shadow-lg overflow-hidden"
           >
             <div className="py-2">
-              <button className="w-full px-4 py-2 text-left hover:bg-gray-100 transition-colors">
+              <button 
+                onClick={() => handleNavigation('/auth')}
+                className="w-full px-4 py-2 text-left hover:bg-gray-100 transition-colors"
+              >
                 로그인
               </button>
-              <button className="w-full px-4 py-2 text-left hover:bg-gray-100 transition-colors">
+              <button 
+                onClick={() => handleNavigation('/auth/signup')}
+                className="w-full px-4 py-2 text-left hover:bg-gray-100 transition-colors"
+              >
                 회원가입
               </button>
             </div>
