@@ -1,6 +1,7 @@
 // app/auth/page.tsx
 "use client";
 
+import { signIn } from "next-auth/react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Link from "next/link";
@@ -72,15 +73,15 @@ export default function AuthPage() {
         <motion.div className={styles.socialLogin} variants={itemVariants}>
           <h3>소셜 로그인</h3>
           <div className={styles.socialButtons}>
-            <button className={`${styles.socialButton} ${styles.kakao}`}>
-              <Image src="/kakao-icon.svg" alt="Kakao" width={24} height={24} />
+            <button className={`${styles.socialButton} ${styles.kakao}`} onClick={() => signIn('kakao')}>
+              <Image src="/kakao-icon.svg" alt="Kakao" width={24} height={24}  />
               카카오로 시작하기
             </button>
-            <button className={`${styles.socialButton} ${styles.naver}`}>
-              <Image src="/naver-icon.svg" alt="Naver" width={24} height={24} />
+            <button className={`${styles.socialButton} ${styles.naver}`} onClick={() => signIn('naver')}>
+              <Image src="/naver-icon.svg" alt="Naver" width={24} height={24}  />
               네이버로 시작하기
             </button>
-            <button className={`${styles.socialButton} ${styles.github}`}>
+            <button className={`${styles.socialButton} ${styles.github}`} onClick={() => signIn('github')}>
               <Image
                 src="/github-icon.svg"
                 alt="Github"
@@ -88,6 +89,15 @@ export default function AuthPage() {
                 height={24}
               />
               Github으로 시작하기
+            </button>
+            <button className={`${styles.socialButton} ${styles.github}`} onClick={() => signIn('google')}>
+              <Image
+                src="/google-icon.svg"
+                alt="Github"
+                width={24}
+                height={24}
+              />
+              Google로 시작하기
             </button>
           </div>
         </motion.div>

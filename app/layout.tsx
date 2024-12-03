@@ -1,4 +1,5 @@
 // app/layout.tsx
+import { SessionProvider } from "next-auth/react";
 import type { Metadata } from 'next'
 import './globals.css'
 import Navbar from '@/components/navbar'
@@ -28,6 +29,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
+    <SessionProvider>
     <html lang="ko">
       <body className="min-h-screen bg-white vsc-initialized">
         {/* 배경 블러 원 */}
@@ -43,5 +45,6 @@ export default function RootLayout({
         </main>
       </body>
     </html>
+    </SessionProvider>
   )
 }
